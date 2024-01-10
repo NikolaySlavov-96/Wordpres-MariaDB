@@ -1,10 +1,11 @@
 version: "3.3"
 services:
-    mysql:
+    maria_db:
         container_name: wordpress_db
+        restart: always
         environment:
-            - MYSQL_ROOT_PASSWORD=password-222
-            - MYSQL_DATABASE=wordpress
+            - MARIADB_ROOT_PASSWORD=password-222
+            - MARIADB_DATABASE=wordpress
         networks:
             - my_network
         volumes:
